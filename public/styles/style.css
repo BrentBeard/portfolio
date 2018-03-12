@@ -585,7 +585,7 @@ header {
   header h1 {
     margin: 0;
     font-size: 80px;
-    letter-spacing: 1px; }
+    letter-spacing: 2px; }
   header h2 {
     font-size: 32px;
     font-weight: 400;
@@ -737,6 +737,23 @@ i.devicon-wordpress-plain {
   text-align: right;
   float: right;
   margin-right: 10%; }
+
+h4.sneakyWorks {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 10px;
+  text-align: center;
+  display: none;
+  color: #FDFDFD;
+  font-family: "Fjalla One", sans-serif;
+  border-bottom: 3px solid #FDFDFD;
+  font-size: 20px;
+  padding: 0 5px 5px;
+  text-transform: uppercase;
+  width: 25%;
+  letter-spacing: 3px; }
 
 .works {
   width: 100%;
@@ -1011,6 +1028,8 @@ footer p {
     top: 0; } }
 
 @media (max-width: 700px) {
+  h4.sneakyWorks {
+    display: inline-block; }
   .workBlocks {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1074,7 +1093,9 @@ footer p {
   .contactInner {
     width: 100%; }
   .formBox {
-    width: 80%; } }
+    width: 80%; }
+  .left h2 {
+    width: 65%; } }
 
 @media (max-width: 400px) {
   .toolBox i {
