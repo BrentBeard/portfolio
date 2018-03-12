@@ -6,11 +6,181 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>HTML/CSS/JS Boilerplate</title>
 	<link rel="stylesheet" href="./public/styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Alike+Angular|Fjalla+One|Montserrat:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400,600,700,800" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 </head>
 <body>
 
-	<h1>HTML/CSS/JS Boilerplate</h1>
-	<p>Let's code!</p>
+	<header>
+		<div class='wrapper'>
+			<nav class='navBar'>
+				<ul class='navList'>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Skills</a></li>
+					<li><a href="#">Works</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class='wrapper headerInner'>
+			<div class='headerText'>
+				<h1>Brent Carabott</h1>
+				<h2>Web Developer </h2>
+				<!-- <h3>Nice guy. Tries hard. Loves the game.</h3> -->
+				<h3>Passionate. Creative. Bearded.</h3>
+			</div>
+		
+			<div class='headshotBox'><div class='frameOffset'></div><img src="./dev/assets/brentHeadshotPam18edit.jpg" alt="Sweet photo of Brent"></div>
+		</div>
+
+	</header>
+
+	<section class="about">
+		<div class='wrapper aboutContainer'>
+
+
+			<h2>About Myself</h2>
+				<div class='aboutText'>
+					<p>Get to the front and get a stick on it. It was a team effort. Just get the point. Obviously uhh Clapped a rocket top cheddar.
+					They've got a real good two-way game. Turned the jets on. Old time hockey. Wheel. Snipe. Celly. Y'know You miss 100% of the
+					shots you don't take. Need good puck movers. Put some sauce on that pass. Obviously uhh Grippin' the stick too tight. Get
+					on your horse bud! Give 'n' go Get your flippers off and let's go. They work real hard. Turned the jets on.
+					</p>
+				</div>
+		</div>
+
+	</section>
+
+	<section class='skills'>
+		<h2>In the Toolbox</h2>
+		<div class="wrapper skillsInner">
+			<p class='learning'>Learning</p>
+			<div class='toolBox'>
+				<i class="devicon-react-original"></i>
+				<i class="devicon-html5-plain"></i>
+				<i class="devicon-css3-plain-wordmark"></i>
+				<i class="devicon-javascript-plain"></i>
+				<i class="devicon-jquery-plain-wordmark"></i>
+				<i class="devicon-babel-plain"></i>
+				<i class="devicon-github-plain"></i>
+				<i class="devicon-gulp-plain"></i>
+				<i class="devicon-sass-original"></i>
+				<i class="devicon-visualstudio-plain"></i>
+				<i class="devicon-git-plain"></i>
+				<!-- terminal responsiveness firebase -->
+				<svg class='redux' viewBox="0 0 256 244" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				 preserveAspectRatio="xMidYMid">
+					<g>
+						<path d="M177.380953,169.732752 C186.828305,168.755405 193.995262,160.610839 193.669491,150.83736 C193.34372,141.063881 185.199451,133.245097 175.426328,133.245097 L174.774787,133.245097 C164.675893,133.57088 156.857395,142.041229 157.183166,152.14049 C157.508937,157.02723 159.463561,161.262404 162.395498,164.194448 C151.319292,186.021884 134.379213,201.985233 108.969093,215.342321 C91.7032429,224.464235 73.7858511,227.722061 55.8684592,225.441583 C41.208775,223.486887 29.8067984,216.971234 22.6398417,206.220408 C12.2151773,190.257058 11.237865,172.990579 20.0336756,155.724099 C26.22332,143.344359 35.9964428,134.222445 42.1860873,129.661488 C40.8830043,125.426314 38.9283797,118.259096 37.9510674,113.046574 C-9.28569288,147.253751 -4.39913147,193.514885 9.934782,215.342321 C20.6852171,231.631453 42.5118581,241.730715 66.6188943,241.730715 C73.1343096,241.730715 79.6497248,241.079149 86.16514,239.450236 C127.863797,231.30567 159.463561,206.54619 177.380953,169.732752 Z M234.716607,129.335706 C209.958029,100.341051 173.471704,84.3777023 131.773046,84.3777023 L126.560714,84.3777023 C123.628777,78.5136149 117.439133,74.6042233 110.597947,74.6042233 L109.946406,74.6042233 C99.8475119,74.9300059 92.0290137,83.4003544 92.3547844,93.499616 C92.6805552,103.273095 100.824824,111.091878 110.597947,111.091878 L111.249489,111.091878 C118.416445,110.766096 124.60609,106.205139 127.212256,100.015269 L133.07613,100.015269 C157.834707,100.015269 181.290202,107.182487 202.465302,121.19114 C218.75384,131.941967 230.481587,145.95062 236.997002,162.891317 C242.535105,176.574188 242.209334,189.931276 236.345461,201.333668 C227.223879,218.600148 211.912654,228.047844 191.714866,228.047844 C178.684036,228.047844 166.304747,224.138452 159.789332,221.206409 C156.205854,224.464235 149.690438,229.676757 145.129648,232.934584 C159.13779,239.450236 173.471704,243.033845 187.154076,243.033845 C218.428069,243.033845 241.557793,225.767366 250.353603,208.500886 C259.800955,189.605493 259.149414,157.02723 234.716607,129.335706 Z M69.2250604,175.271057 C69.5508312,185.044536 77.6951002,192.86332 87.468223,192.86332 L88.1197645,192.86332 C98.2186581,192.537537 106.037156,184.067188 105.711386,173.967927 C105.385615,164.194448 97.2413458,156.375664 87.468223,156.375664 L86.8166815,156.375664 C86.16514,156.375664 85.1878277,156.375664 84.5362862,156.701447 C71.179685,134.548228 65.6415821,110.440313 67.5962066,84.3777023 C68.8992897,64.8307442 75.4147049,47.8900472 86.8166815,33.881394 C96.2640336,21.8274365 114.507196,15.9633491 126.886485,15.6375664 C161.418186,14.9860012 176.07787,57.9893089 177.055182,75.2557885 C181.290202,76.2331364 188.457159,78.5136149 193.34372,80.142528 C189.434471,27.3657413 156.857395,0 125.583402,0 C96.2640336,0 69.2250604,21.1758712 58.4746253,52.4510041 C43.4891703,94.1511813 53.2622932,134.222445 71.5054558,165.823361 C69.876602,168.103839 68.8992897,171.687448 69.2250604,175.271057 Z"
+						 fill="#764ABC"></path>
+					</g>
+				</svg>
+				<i class="devicon-wordpress-plain"></i>
+			</div>
+		</div>
+	</section>
+	<section class="works">
+
+		<div class='workBlocks'>
+			<div class='offBlack left'>
+				<div class='worksTextBox leftText'>
+					<h2>Hockey Ipsum</h2>
+						<div class='linkBox'>
+							<a target='_' href="https://github.com/BrentBeard/HockeyIpsum">Github</a>
+							<a target='_' href="https://brentbeard.github.io/HockeyIpsum/">Live</a>
+						</div>
+							<p class='workP'>A fully responsive hockey themed lorem ipsum generator built using JavaScript and jQuery complete with a copy button for your clipboard.
+							</p>	
+				</div>
+			</div>
+			<div class="blackBlack">
+				<div class='screenshotContainer'>
+					<div class='frameOffset'></div>
+					<img src="./dev/assets/hockey1.png" alt="Hockey Ipsum project">
+				</div>
+			</div>
+		</div>
+		<div class='workBlocks'>
+			<div class="blackBlack">
+				<div class='screenshotContainer'>
+					<img src="./dev/assets/genius.png" alt="Responsive PSD Project">
+					<div class='frameOffsetRight'></div>
+				</div>
+			</div>
+			<div class='offBlack right'>
+				<div class='worksTextBox rightText'>
+					<h2>Responsive PSD</h2>
+					<div class='linkBox'>
+						<a target='_'href="https://github.com/BrentBeard/genius-responsive">Github</a>
+						<a target='_'href="https://brentbeard.github.io/genius-responsive/">Live</a>
+					</div>
+					<p class='rightP'>
+						A PSD conversion built with HTML and CSS. Made to be responsive down to the last pixel.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class='workBlocks'>
+			<div class='offBlack left'>
+				<div class='worksTextBox leftText'>
+					<h2>DnD React</h2>
+					<div class='linkBox'>
+						<a target='_' href="https://github.com/BrentBeard/HockeyIpsum">Github</a>
+						<a target='_' href="https://brentbeard.github.io/HockeyIpsum/">Live</a>
+					</div>
+					<p>A Dungeons and Dragons character sheet built with React and Firebase. Transfer your character info to this app and leave the scrolls behind. 
+					</p>
+				</div>
+			</div>
+			<div class="blackBlack">
+				<div class='screenshotContainer'>
+					<div class='frameOffset'></div>
+					<img src="./dev/assets/hockey1.png" alt="Hockey Ipsum project">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contactSection">
+		<h2>Contact</h2>
+		<div class="wrapper contactInner">
+			<div class='socialBox'>
+				<div>
+					<h3>Social Media</h3>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-github"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<div>
+					<h3>Email</h3>
+					<a href="mailto:brent.carabott@gmail.com">brent@brent.carabott.ca</a>
+				</div>
+
+				<div>
+					<i class="fas fa-map-marker-alt"></i><p>Toronto</p>
+				</div>
+			</div>
+			<div class='formBox'>
+				<form action="https://formspree.io/brent.carabott@gmail.com" method="POST">
+					<div class='nameBox'><label for="name">Name:</label><input type="text" id="name" name="name"></div>
+					<div class='emailBox'><label for="email">Email:</label><input type="email" id="email" name="_replyto"></div>
+					<div class='textAreaBox'><label for="message">Leave a message:</label><textarea name="message" id="message" cols="30" rows="10"></textarea></div>
+					<input class='sendMe' type="submit" value="Send">
+				</form>
+			</div>
+
+		</div>
+
+	</section>
+	<footer>
+		<div class="wrapper">
+			<p>&copy; 2018 Developed by Brent Carabott</p>
+			<p>Theme by TrustCoders</p>
+
+		</div>
+	</footer>
 
 	<script src="public/scripts/main.js"></script>
 </body>

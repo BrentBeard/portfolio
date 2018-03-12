@@ -1,12 +1,402 @@
 @import 'components/normalize';
 @import 'components/base';
 @import 'components/typography';
+@import 'components/animations';
 
-.container {
-	max-width: 900px;
+body {
+	font-family: $title-font;
+	width: 100%;
+	
+}
+
+.wrapper {
+	width: 80%;
 	margin: 0 auto;
 }
 
-* {
-	outline: 1px solid red;
+.headerInner {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
+
+header {
+	background-color: $mainBlack;
+	height: 100vh;
+	color: $whiteish;
+	text-transform: uppercase;
+	margin: 0;
+		h1 {
+			margin: 0;
+			font-size: 80px;
+			letter-spacing: 1px;
+		}
+		h2 {
+			font-size: 48px;
+			font-weight: 400;
+			margin-bottom: 5px;
+			letter-spacing: 4px;
+		}
+		h3 {
+			font-weight: 400;
+			letter-spacing: 4px;
+			margin-top: 0;
+		}
+}
+
+.navBar {
+	padding: 40px 0 20px;
+}
+
+.navList {
+	list-style: none;
+	margin: 0;
+	margin-bottom: 50px;
+	padding: 20px 0;
+	display: flex;
+	justify-content: flex-end;
+		a {
+			text-decoration: none;
+			color: $whiteish;
+			padding: 0 20px;
+			font-weight: lighter;
+			font-family: $title-font;
+			letter-spacing: 2px;
+			font-weight: 300;
+			position: relative;
+			display: block;
+		}
+}
+
+.navList li a:hover {
+	// background: $whiteish;
+	-webkit-animation: text-shadow-pop-tr 0.6s both;
+	        animation: text-shadow-pop-tr 0.6s both;
+}
+
+// .navList a:hover:after {
+// 	width: 100%;
+// }
+
+
+.headshotBox, .aboutHeadshotBox {
+	width: 400px;
+	position: relative;
+
+	img {
+		width: 100%;
+		// height: auto;
+		z-index: 10;
+		// position: relative;
+	}
+}
+
+.frameOffset {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	z-index: 0;
+	border: 3px solid $whiteish
+}
+
+.about {
+	background: $secBlack;
+	padding: 80px 0;
+}
+
+.aboutContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.aboutText {
+	background: #e0d8d8;
+	border: 20px groove $mainBlack;
+	padding: 20px;
+	p {
+		background: $whiteish;
+		color: $secBlack;
+		font-family: $body;
+		font-weight: 400;
+		padding: 40px;
+		line-height: 2;
+		text-align: center;
+		margin: 0;
+		box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.50);
+	}
+}
+
+.about h2, .skills h2, .works h2 {
+	color: $whiteish;
+	border-bottom: 3px solid $whiteish;
+	margin: 0;
+	margin-bottom: 60px;
+	width: 20%;
+	padding: 0 10px 5px 0;
+	text-transform: uppercase;
+}
+
+.aboutHeadshotBox {
+	transform: rotate(180deg);
+}
+
+.skills {
+	background: $mainBlack;
+	padding: 80px 0;
+	h2 {
+		padding-right: 0;
+	}
+}
+
+
+.learning {
+	color: #764ABC;
+	position: absolute;
+	right: 0;
+	top: -4%;
+}
+
+.toolBox {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+
+.toolBox i, .redux {
+	font-size: 100px;
+	color: $whiteish;
+	margin: 20px 20px;
+}
+
+I.devicon-wordpress-plain {
+	color: #764ABC
+}
+
+.redux, .firebase {
+	width: 100px;
+	height: 100px;
+}
+
+.skillsInner {
+	margin-top: 50px;
+	position: relative;
+}
+
+.skills h2 {
+	text-align: right;
+	float: right;
+	margin-right: 10%;
+}
+
+.works {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.workBlocks {
+	display: flex;
+}
+
+.blackBlack, .offBlack {
+	width: 50%;
+	padding: 80px 3%;
+}
+
+.offBlack {
+	background: $secBlack;
+	
+}
+
+.workBlocks .left h2 {
+		// margin-left: 17%;
+		width: 45%;
+		margin-bottom: 0;
+	}
+
+.rightText h2 {
+	text-align: right;
+	margin-bottom: 0;
+	padding-right: 0;
+	// margin-right: 10%;
+	// float: right;
+	width: 70%;
+	// display: block;
+	// align-content: right;
+}
+
+.rightText p {
+	padding-right: 0;
+	padding-top: 30px;
+	text-align: right;
+	font-family: $body;
+	line-height: 2;
+	color: $whiteish;
+}
+
+.leftText p {
+	width: 70%;
+	// background: #e0d8d8;
+	padding: 30px 30px 30px 0px;
+	font-family: $body;
+	line-height: 2;
+	color: $whiteish;
+	// border: 10px groove $mainBlack;
+}
+
+.worksTextBox {
+	display: flex;
+	flex-direction: column;
+}
+
+.blackBlack {
+	background: $mainBlack;
+	// position: relative;
+}
+
+.screenshotContainer {
+	width: 70%;
+	margin: 25px auto;
+	position: relative;
+	
+		img {
+			width: 100%;
+			z-index: 10;
+			position: relative;
+		}
+}
+
+.workBlocks a {
+	background: $whiteish;
+	padding: 10px;
+	display: inline-block;
+	text-align: center;
+	min-width: 80px;
+	max-width: 80px;
+	color: $mainBlack;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: $title-font;
+	transition: 1s ease;
+	border: 1px solid transparent;
+}
+
+.workBlocks a:hover {
+	background: $mainBlack;
+	color: $whiteish;
+	border: 1px solid $whiteish;
+}
+
+.worksTextBox:nth-of-type(1n) {
+	margin-left: 17%;
+}
+
+.rightText {
+	margin-right: 17%;
+	margin-left: 0;
+	align-items: flex-end;
+}
+
+.frameOffsetRight {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 6%;
+	left: 5%;
+	z-index: 0;
+	border: 3px solid $whiteish
+}
+
+.linkBox {
+	margin-top: 15px;
+}
+
+.contactSection {
+	background: #e0d8d8;
+	padding: 80px 0;
+	display: flex;
+	flex-direction: column;
+	h2 {
+		margin-top: 0;
+		margin: 0 auto;
+		font-family: $title-font;
+		text-transform: uppercase;
+		color: $mainBlack;
+		border-bottom: 3px solid $mainBlack;
+		margin-bottom: 40px;
+		display: inline-block;
+	}
+}
+
+.contactInner {
+	background: $mainBlack;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 60px 40px 60px;
+	
+	color: $whiteish;
+}
+
+.socialBox {
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+		a {
+			color: $whiteish;
+		}
+}
+
+.fa-twitter, .fa-github, .fa-linkedin-in, .fa-map-marker-alt {
+	font-size: 30px;
+	margin-right: 10px;
+}
+
+.formBox {
+	width: 65%;
+	display: flex;
+	form {
+		width: 100%;
+	}
+}
+
+.nameBox, .emailBox, .textAreaBox {
+	display: flex;
+	flex-direction: column;
+	input, textarea {
+		background: none;
+		border: none;
+		border: 3px solid $whiteish;
+		margin: 10px 0;
+		color: $whiteish;
+	}
+}
+
+.nameBox input, .emailBox input {
+	height: 50px;
+} 
+
+.formBox label {
+	padding-top: 10px;
+}
+
+.sendMe {
+	background: none;
+	color: $whiteish;
+	border: 3px solid $whiteish;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+footer {
+	background: $mainBlack;
+	padding: 40px;
+	color: $whiteish;
+	font-family: $body;
+}
+
