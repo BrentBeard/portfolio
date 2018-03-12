@@ -1050,6 +1050,8 @@ footer p {
 @media (max-width: 575px) {
   .headerText h1 {
     font-size: 66px; }
+  .headerText {
+    padding: 0; }
   .navList a {
     padding: 0 10px; }
   .contactSection {
@@ -1093,7 +1095,7 @@ footer p {
   .contactInner {
     width: 100%; }
   .formBox {
-    width: 80%; }
+    width: 100%; }
   .left h2 {
     width: 65%; } }
 

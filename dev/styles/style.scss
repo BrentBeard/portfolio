@@ -570,6 +570,9 @@ footer p {
 	.headerText h1 {
 		font-size: 66px;
 	}
+	.headerText {
+		padding: 0;
+	}
 
 	.navList a {
 		padding: 0 10px;
@@ -612,7 +615,7 @@ footer p {
 		width: 100%;
 	}
 	.formBox {
-		width: 80%;
+		width: 100%;
 	}
 
 	.left h2 {

@@ -1,5 +1,9 @@
-"use strict";
+'use strict';
 
-var ohHey = "Hello World";
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
 
-console.log(ohHey);
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 800);
+});
