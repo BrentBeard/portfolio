@@ -1013,16 +1013,16 @@ footer p {
 @media (max-width: 700px) {
   .workBlocks {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
   .offBlack, .blackBlack {
     width: 100%; }
   .workMiddle {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse; }
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
   .contactInner {
     width: 100%; }
   footer div {

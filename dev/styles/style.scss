@@ -499,7 +499,7 @@ footer p {
 	.navList {
 		justify-content: center;
 	}
-	
+
 	.hidden {
 		display: block;
 		margin-left: 30px;
@@ -527,13 +527,13 @@ footer p {
 
 @media (max-width: 700px) {
 	.workBlocks {
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 	.offBlack, .blackBlack {
 		width: 100%;
 	} 
 	.workMiddle {
-		flex-direction: column-reverse;
+		flex-direction: column
 	}
 	.contactInner {
 		width: 100%;
