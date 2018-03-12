@@ -569,11 +569,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left; }
 
 header {
   background-color: #232323;
@@ -586,7 +587,7 @@ header {
     font-size: 80px;
     letter-spacing: 1px; }
   header h2 {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 400;
     margin-bottom: 5px;
     letter-spacing: 4px; }
@@ -624,12 +625,30 @@ header {
   -webkit-animation: text-shadow-pop-tr 0.6s both;
   animation: text-shadow-pop-tr 0.6s both; }
 
-.headshotBox, .aboutHeadshotBox {
-  width: 400px;
-  position: relative; }
-  .headshotBox img, .aboutHeadshotBox img {
+.headshotBox {
+  width: 35%;
+  position: relative;
+  top: 120px; }
+  .headshotBox img {
     width: 100%;
     z-index: 10; }
+
+.headshotBox {
+  position: fixed;
+  right: 120px;
+  z-index: 2; }
+
+.headerText {
+  padding-right: 30%;
+  margin-top: 30px; }
+
+.hidden {
+  display: none;
+  position: relative;
+  width: 40%;
+  float: right; }
+  .hidden img {
+    width: 100%; }
 
 .frameOffset {
   width: 100%;
@@ -642,32 +661,25 @@ header {
 
 .about {
   background: #333333;
-  padding: 80px 0; }
+  padding: 80px 0 100px;
+  z-index: 4; }
+
+.skills, .works, .contactSection, footer {
+  z-index: 4;
+  position: relative; }
 
 .aboutContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  position: relative; }
 
-.aboutText {
-  background: #e0d8d8;
-  border: 20px groove #232323;
-  padding: 20px; }
-  .aboutText p {
-    background: #FDFDFD;
-    color: #333333;
-    font-family: "Alike Angular", serif;
-    font-weight: 400;
-    padding: 40px;
-    line-height: 2;
-    text-align: center;
-    margin: 0;
-    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5); }
+.about p {
+  width: 50%;
+  color: #FDFDFD;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  padding: 30px 30px 0 0;
+  line-height: 2;
+  text-align: left;
+  margin: 0; }
 
 .about h2, .skills h2, .works h2 {
   color: #FDFDFD;
@@ -678,9 +690,8 @@ header {
   padding: 0 10px 5px 0;
   text-transform: uppercase; }
 
-.aboutHeadshotBox {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg); }
+.about h2 {
+  margin-bottom: 0; }
 
 .skills {
   background: #232323;
@@ -711,7 +722,7 @@ header {
   color: #FDFDFD;
   margin: 20px 20px; }
 
-I.devicon-wordpress-plain {
+i.devicon-wordpress-plain {
   color: #764ABC; }
 
 .redux, .firebase {
@@ -763,14 +774,14 @@ I.devicon-wordpress-plain {
   padding-right: 0;
   padding-top: 30px;
   text-align: right;
-  font-family: "Alike Angular", serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 2;
   color: #FDFDFD; }
 
 .leftText p {
   width: 70%;
   padding: 30px 30px 30px 0px;
-  font-family: "Alike Angular", serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 2;
   color: #FDFDFD; }
 
@@ -788,7 +799,7 @@ I.devicon-wordpress-plain {
 
 .screenshotContainer {
   width: 70%;
-  margin: 25px auto;
+  margin: 20px auto;
   position: relative; }
   .screenshotContainer img {
     width: 100%;
@@ -838,8 +849,8 @@ I.devicon-wordpress-plain {
   margin-top: 15px; }
 
 .contactSection {
-  background: #e0d8d8;
-  padding: 80px 0;
+  background: #232323;
+  padding: 60px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -852,8 +863,8 @@ I.devicon-wordpress-plain {
     margin: 0 auto;
     font-family: "Fjalla One", sans-serif;
     text-transform: uppercase;
-    color: #232323;
-    border-bottom: 3px solid #232323;
+    color: #FDFDFD;
+    border-bottom: 3px solid #FDFDFD;
     margin-bottom: 40px;
     display: inline-block; }
 
@@ -886,6 +897,22 @@ I.devicon-wordpress-plain {
           justify-content: space-between; }
   .socialBox a {
     color: #FDFDFD; }
+  .socialBox p {
+    margin-bottom: 0; }
+
+.media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .media a {
+    margin: 10px 0; }
 
 .fa-twitter, .fa-github, .fa-linkedin-in, .fa-map-marker-alt {
   font-size: 30px;
@@ -912,7 +939,8 @@ I.devicon-wordpress-plain {
     border: none;
     border: 3px solid #FDFDFD;
     margin: 10px 0;
-    color: #FDFDFD; }
+    color: #FDFDFD;
+    padding: 10px; }
 
 .nameBox input, .emailBox input {
   height: 50px; }
@@ -924,11 +952,133 @@ I.devicon-wordpress-plain {
   background: none;
   color: #FDFDFD;
   border: 3px solid #FDFDFD;
-  padding: 10px;
+  padding: 10px 15px;
   margin-top: 10px; }
 
 footer {
   background: #232323;
   padding: 40px;
   color: #FDFDFD;
-  font-family: "Alike Angular", serif; }
+  font-family: "Open Sans", sans-serif; }
+
+footer p {
+  margin: 0;
+  font-size: 12px; }
+
+@media (max-width: 1250px) {
+  .headerText {
+    width: 75%; } }
+
+@media (max-width: 970px) {
+  .worksTextBox p {
+    width: 90%;
+    padding-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 20px; }
+  .screenshotContainer {
+    margin-top: 40px; }
+  .blackBlack, .offBlack {
+    padding: 40px 3%; } }
+
+@media (max-width: 870px) {
+  .headshotBox {
+    right: 80px; }
+  .devicon-babel-plain {
+    display: none; } }
+
+@media (max-width: 800px) {
+  .headshotBox {
+    display: none; }
+  .navList {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .hidden {
+    display: block;
+    margin-left: 30px;
+    margin-bottom: 30px; }
+  .about p {
+    width: 100%; }
+  .aboutContainer {
+    position: relative; }
+  .headerText {
+    width: 100%;
+    text-align: center;
+    padding-right: 0; }
+    .headerText h3 {
+      margin-top: 20px; }
+  .learning {
+    top: 0; } }
+
+@media (max-width: 700px) {
+  .workBlocks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .offBlack, .blackBlack {
+    width: 100%; }
+  .workMiddle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+  .contactInner {
+    width: 100%; }
+  footer div {
+    width: 100%; } }
+
+@media (max-width: 575px) {
+  .headerText h1 {
+    font-size: 66px; }
+  .navList a {
+    padding: 0 10px; }
+  .contactSection {
+    padding-bottom: 20px; }
+  .contactInner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 0; }
+  .socialBox {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 0; }
+  .media, .emailList, .mapBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 40px; }
+  .emailList h3 {
+    margin: 0;
+    display: none; }
+  .mapBox p {
+    margin: 0; }
+  .fa-map-marker-alt {
+    display: none; }
+  footer {
+    padding-top: 0; }
+  .contactInner {
+    width: 100%; }
+  .formBox {
+    width: 80%; } }
+
+@media (max-width: 400px) {
+  .toolBox i {
+    font-size: 80px; }
+  .redux {
+    width: 80px;
+    height: 80px; } }

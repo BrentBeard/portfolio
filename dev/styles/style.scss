@@ -16,8 +16,8 @@ body {
 
 .headerInner {
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	justify-content: space-between;
+	align-items: left;
 }
 
 header {
@@ -32,7 +32,7 @@ header {
 			letter-spacing: 1px;
 		}
 		h2 {
-			font-size: 48px;
+			font-size: 32px;
 			font-weight: 400;
 			margin-bottom: 5px;
 			letter-spacing: 4px;
@@ -79,9 +79,10 @@ header {
 // }
 
 
-.headshotBox, .aboutHeadshotBox {
-	width: 400px;
+.headshotBox {
+	width: 35%;
 	position: relative;
+	top: 120px;
 
 	img {
 		width: 100%;
@@ -90,6 +91,34 @@ header {
 		// position: relative;
 	}
 }
+
+.headshotBox {
+	position: fixed;
+	right: 120px;
+	z-index: 2;
+}
+
+.headerText {
+	padding-right: 30%;
+	margin-top: 30px;
+}
+
+.hidden {
+	display: none;
+	position: relative;
+	width: 40%;
+	float: right;
+		img {
+			width: 100%;
+		}
+}
+
+
+// @media (max-width: 1250px) {
+// 	.headerText {
+// 		width: 75%;
+// 	}
+// }
 
 .frameOffset {
 	width: 100%;
@@ -103,30 +132,34 @@ header {
 
 .about {
 	background: $secBlack;
-	padding: 80px 0;
+	padding: 80px 0 100px;;
+	z-index: 4;
+}
+
+.skills, .works, .contactSection, footer {
+	z-index: 4;
+	position: relative;
 }
 
 .aboutContainer {
-	display: flex;
-	flex-direction: column;
+	// display: flex;
+	// flex-direction: column;
+	position: relative;
 }
 
-.aboutText {
-	background: #e0d8d8;
-	border: 20px groove $mainBlack;
-	padding: 20px;
-	p {
-		background: $whiteish;
-		color: $secBlack;
+
+.about p {
+		// background: $whiteish;
+		width: 50%;
+		color: $whiteish;
 		font-family: $body;
 		font-weight: 400;
-		padding: 40px;
+		padding: 30px 30px 0 0;
 		line-height: 2;
-		text-align: center;
+		text-align: left;
 		margin: 0;
-		box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.50);
+		// box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.50);
 	}
-}
 
 .about h2, .skills h2, .works h2 {
 	color: $whiteish;
@@ -138,8 +171,8 @@ header {
 	text-transform: uppercase;
 }
 
-.aboutHeadshotBox {
-	transform: rotate(180deg);
+.about h2 {
+	margin-bottom: 0;
 }
 
 .skills {
@@ -172,7 +205,7 @@ header {
 	margin: 20px 20px;
 }
 
-I.devicon-wordpress-plain {
+i.devicon-wordpress-plain {
 	color: #764ABC
 }
 
@@ -196,6 +229,8 @@ I.devicon-wordpress-plain {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	// border-top: 5px solid $whiteish;
+	// border-bottom: 5px solid $whiteish;
 }
 
 .workBlocks {
@@ -206,6 +241,8 @@ I.devicon-wordpress-plain {
 	width: 50%;
 	padding: 80px 3%;
 }
+
+
 
 .offBlack {
 	background: $secBlack;
@@ -260,7 +297,7 @@ I.devicon-wordpress-plain {
 
 .screenshotContainer {
 	width: 70%;
-	margin: 25px auto;
+	margin: 20px auto;
 	position: relative;
 	
 		img {
@@ -316,8 +353,8 @@ I.devicon-wordpress-plain {
 }
 
 .contactSection {
-	background: #e0d8d8;
-	padding: 80px 0;
+	background: $mainBlack;
+	padding: 60px 0;
 	display: flex;
 	flex-direction: column;
 	h2 {
@@ -325,8 +362,8 @@ I.devicon-wordpress-plain {
 		margin: 0 auto;
 		font-family: $title-font;
 		text-transform: uppercase;
-		color: $mainBlack;
-		border-bottom: 3px solid $mainBlack;
+		color: $whiteish;
+		border-bottom: 3px solid $whiteish;
 		margin-bottom: 40px;
 		display: inline-block;
 	}
@@ -350,6 +387,18 @@ I.devicon-wordpress-plain {
 		a {
 			color: $whiteish;
 		}
+		p {
+			margin-bottom: 0;
+		}
+}
+
+.media {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	a {
+		margin: 10px 0;
+	}
 }
 
 .fa-twitter, .fa-github, .fa-linkedin-in, .fa-map-marker-alt {
@@ -374,6 +423,7 @@ I.devicon-wordpress-plain {
 		border: 3px solid $whiteish;
 		margin: 10px 0;
 		color: $whiteish;
+		padding: 10px;
 	}
 }
 
@@ -389,7 +439,7 @@ I.devicon-wordpress-plain {
 	background: none;
 	color: $whiteish;
 	border: 3px solid $whiteish;
-	padding: 10px;
+	padding: 10px 15px;
 	margin-top: 10px;
 }
 
@@ -399,4 +449,159 @@ footer {
 	color: $whiteish;
 	font-family: $body;
 }
+
+footer p {
+	margin: 0;
+	font-size: 12px;
+}
+
+
+
+// MEDIA QUERIES
+
+@media (max-width: 1250px) {
+	.headerText {
+		width: 75%;
+	}
+}
+
+@media (max-width: 970px) {
+	.worksTextBox p {
+		width: 90%;
+		padding-top: 10px;
+		margin-bottom: 0;
+		padding-bottom: 20px;
+	}
+
+	.screenshotContainer {
+		margin-top: 40px;
+	}
+
+	.blackBlack, .offBlack {
+		padding: 40px 3%;
+	}
+}
+
+@media (max-width: 870px) {
+	.headshotBox {
+		right: 80px;
+	}
+	.devicon-babel-plain {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+	.headshotBox {
+		display: none;
+	}
+
+	.navList {
+		justify-content: center;
+	}
+	
+	.hidden {
+		display: block;
+		margin-left: 30px;
+		margin-bottom: 30px;
+	}
+	.about p {
+		width: 100%
+	}
+	.aboutContainer {
+		position: relative;
+	}
+	.headerText {
+		width: 100%;
+		text-align: center;
+		padding-right: 0;
+			h3 {
+				margin-top: 20px;
+			}
+	}
+	.learning {
+		top: 0;
+	}
+
+}
+
+@media (max-width: 700px) {
+	.workBlocks {
+		flex-direction: column;
+	}
+	.offBlack, .blackBlack {
+		width: 100%;
+	} 
+	.workMiddle {
+		flex-direction: column-reverse;
+	}
+	.contactInner {
+		width: 100%;
+	}
+	footer div {
+		width: 100%;
+	}
+	
+}
+
+@media (max-width: 575px) {
+
+	.headerText h1 {
+		font-size: 66px;
+	}
+
+	.navList a {
+		padding: 0 10px;
+	}
+
+	.contactSection {
+		padding-bottom: 20px;
+	}
+	.contactInner{
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 0;
+	}
+	.socialBox {
+		width: 100%;
+		padding-top: 40px;
+		padding-bottom: 0;
+	}
+	.media, .emailList, .mapBox {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: 40px;
+	}
+	.emailList h3 {
+		margin: 0;
+		display: none;
+	}
+	.mapBox p {
+		margin: 0;
+	}
+	.fa-map-marker-alt {
+		display: none;
+	}
+	footer {
+		padding-top: 0;
+	}
+	.contactInner {
+		width: 100%;
+	}
+	.formBox {
+		width: 80%;
+	}
+ }
+
+ @media (max-width: 400px) {
+	 .toolBox i {
+		 font-size: 80px;
+	 }
+	 .redux {
+		 width: 80px;
+		 height: 80px;
+	 }
+ }
 
