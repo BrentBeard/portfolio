@@ -980,6 +980,7 @@ footer {
 
 footer p {
   margin: 0;
+  margin-bottom: 5px;
   font-size: 12px; }
 
 @media (max-width: 1250px) {
@@ -1010,6 +1011,9 @@ footer p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+  .navList li a:hover {
+    -webkit-animation: none;
+    animation: none; }
   .hidden {
     display: block;
     margin-left: 30px;

@@ -71,7 +71,7 @@ header {
 .navList li a:hover {
 	// background: $whiteish;
 	-webkit-animation: text-shadow-pop-tr 0.6s both;
-	        animation: text-shadow-pop-tr 0.6s both;
+			animation: text-shadow-pop-tr 0.6s both;
 }
 
 // .navList a:hover:after {
@@ -470,6 +470,7 @@ footer {
 
 footer p {
 	margin: 0;
+	margin-bottom: 5px;
 	font-size: 12px;
 }
 
@@ -517,6 +518,11 @@ footer p {
 	.navList {
 		justify-content: center;
 	}
+
+	.navList li a:hover {
+	-webkit-animation: none;
+			animation: none;
+}
 
 	.hidden {
 		display: block;
